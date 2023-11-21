@@ -11,6 +11,6 @@ describe("Node methods", () => {
         };
         const actualOutput = Node(input);
 
-        expect(actualOutput).toEqual(actualOutput);
+        expect(actualOutput).toEqual(expectedOutput);
     })
 })

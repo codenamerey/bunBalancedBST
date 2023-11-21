@@ -13,7 +13,7 @@ describe("Tree methods", () => {
     })
 
     test("Returns correct root", () => {
-        const root = input[Math.floor((input.length / 2))];
+        const root = 5;
         expect(tree.buildTree()).toBe(root);
     })
 })
