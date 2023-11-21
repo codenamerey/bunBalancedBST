@@ -1,3 +1,4 @@
+import Node from "../Node";
 import Tree from "../Tree";
 import { test, expect, it, beforeAll, describe } from "bun:test";
 
@@ -14,7 +15,20 @@ describe("Tree methods", () => {
     })
 
     test("Returns correct root", () => {
-        const root = 5;
-        expect(tree.buildTree()).toBe(root);
+        const root = Node(5);
+        expect((tree.buildTree()).value).toBe(root.value);
+    })
+
+    test("Creates correct binary tree", () => {
+        const expectedNodeLeftRight = 3;
+        const expectedNodeRightRight = 7;
+
+        const actualNodeLeftRight = tree.root.left?.right?.value;
+        const actualNodeRightRight = tree.root.right?.right?.value;
+
+        expect(actualNodeLeftRight).toBe(expectedNodeLeftRight);
+        expect(actualNodeRightRight).toBe(expectedNodeRightRight)
+        expect
+
     })
 })

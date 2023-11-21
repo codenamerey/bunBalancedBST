@@ -3,7 +3,7 @@ import Node from "../Node"
 describe("Node methods", () => {
 
     test("Creates new node", () => {
-        const input = "a";
+        const input = 5;
         const expectedOutput : Node = {
             value: input,
             left: null,

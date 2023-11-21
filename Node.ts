@@ -1,10 +1,10 @@
 interface Node {
-    value: string;
+    value: number;
     left: Node | null;
     right: Node | null;
 }
 
-const Node = (value: string):Node => {
+const Node = (value: number):Node => {
     return {
         value,
         left: null,
