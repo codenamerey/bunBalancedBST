@@ -1,8 +1,8 @@
-import { expect, test, it } from "bun:test";
+import { expect, test, it, describe } from "bun:test";
 import Node from "../Node"
-test("Node methods", () => {
+describe("Node methods", () => {
 
-    it("Creates new node", () => {
+    test("Creates new node", () => {
         const input = "a";
         const expectedOutput : Node = {
             value: input,
