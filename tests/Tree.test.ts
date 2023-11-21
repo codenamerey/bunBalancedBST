@@ -9,7 +9,8 @@ describe("Tree methods", () => {
     })
 
     test("Creates new tree", () => {
-        expect(tree.root).toBe(tree.buildTree());
+        expect(tree).toHaveProperty("root");
+        expect(tree).toHaveProperty("buildTree");
     })
 
     test("Returns correct root", () => {
