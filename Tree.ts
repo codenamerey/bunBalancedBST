@@ -4,20 +4,29 @@ import removeDuplicates from "./utils/removeDuplicates";
 
 interface Tree {
     root: Node;
-    buildTree: () => Node;
+    buildTree: (arr: number[]) => Node;
 }
 debugger;
 const Tree = (arr: number[]):Tree => {
     
-    const buildTree = () => {
+    const buildTree = (arr: number[]) => {
+
+        if(arr.length <= 1) {
+            return Node(arr[0]);
+        }
+
         arr = removeDuplicates(arr);
         arr = mergeSort(arr);
         const mid = Math.floor((arr.length - 1) / 2);
         const root = Node(arr[mid]);
-        const currentNode = root;
+        const left = arr.slice(0, mid);
+        const right = arr.slice(mid + 1);
+        root.left = buildTree(left);
+        root.right = buildTree(right);
         return root;
     };
-    const root = buildTree();
+
+    const root = buildTree(arr);
 
     return { root, buildTree }
 }
