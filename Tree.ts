@@ -10,9 +10,9 @@ debugger;
 const Tree = (arr: number[]):Tree => {
     
     const buildTree = () => {
-        const mid = Math.floor((arr.length - 1) / 2);
         arr = removeDuplicates(arr);
         arr = mergeSort(arr);
+        const mid = Math.floor((arr.length - 1) / 2);
         const root = Node(arr[mid]);
         const currentNode = root;
         return root;
